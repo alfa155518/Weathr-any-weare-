@@ -10,7 +10,7 @@ body {
 
 .content {
     width: 80%;
-    height: 80vh;
+    height: 100vh;
     padding: 20px;
     margin: 20px auto;
     background-color: #37a4c6d6;
@@ -222,7 +222,8 @@ body {
 }
 
 .content .all-details .description span,
-.content .all-details .clouds span {
+.content .all-details .clouds span,
+.content .all-details .countries .country span{
     color: #FFF;
     font-size: 20px;
 }

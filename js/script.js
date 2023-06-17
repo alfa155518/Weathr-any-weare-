@@ -24,6 +24,8 @@ let weatherState = document.querySelector(".content .all-details .box .weather-s
 
 let cloudsDegree = document.querySelector(".content .all-details .box .clouds-degree span");
 
+let countryName = document.querySelector(".content .all-details .box .country span");
+
 let errorMessage = document.createElement('div');
 
 errorMessage.innerHTML = 'You must write the name of any city, capital, province or country in the world';
@@ -68,6 +70,8 @@ function showDetails() {
     }).then(allDetailsWeather => {
         // function get All Date Weather 
         getAllDataWeather(allDetailsWeather)
+
+        console.log(allDetailsWeather)
     })
     
 }
@@ -118,6 +122,9 @@ function getAllDataWeather(allDetails) {
 
     // weather Status 
     weatherState.innerHTML = allDetails.weather[0].description;
+
+    // country 
+    countryName.innerHTML = allDetails.sys.country;
 }
 
 
